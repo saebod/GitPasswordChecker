@@ -33,7 +33,7 @@ try:
                         msgList.append(f' Found Keyword in the following file {filepath}')
             except Exception:
                 print(file)
-    sp.run(['git','checkout','master'])
+    sp.run(['git','checkout','Test2'])
     print('\n'.join(msgList))
 except Exception as e:
     print(e)

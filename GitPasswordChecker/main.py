@@ -26,7 +26,7 @@ try:
             if child.is_file():
                 if wordRe.search(child.read_text()):
                     msgList.append(f'Commit ID: {commit[0]} Commit Name: "{commit[3]}" Found Keyword in the following file {child}')
-    sp.run(['git','checkout','master'])
+    sp.run(['git','checkout','Test2'])
     print('\n'.join(msgList))
 except Exception as e:
     print(e)
