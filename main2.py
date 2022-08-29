@@ -2,6 +2,7 @@ import subprocess as sp
 from pathlib import Path
 import re
 import sys
+import os
 msgList=[]
 
 # Reads the Keyword list$
@@ -22,10 +23,16 @@ commits = [ln.split('\t') for ln in sp.check_output(args, text=True).splitlines(
 try:
     for commit in commits:
         sp.run(['git','checkout',commit[0]])
-        for child in Path('.').iterdir():
-            if child.is_file():
-                if wordRe.search(child.read_text()):
-                    msgList.append(f'Commit ID: {commit[0]} Commit Name: "{commit[3]}" Found Keyword in the following file {child}')
+        for root, directories, files in os.walk('.'):
+            try:
+                for filename in files:
+                    # Join the two strings in order to form the full filepath.
+                    filepath = os.path.join(root, filename)
+
+                    if wordRe.search(Path(filepath).read_text()):
+                        msgList.append(f' Found Keyword in the following file {filepath}')
+            except Exception:
+                print(file)
     sp.run(['git','checkout','master'])
     print('\n'.join(msgList))
 except Exception as e:
