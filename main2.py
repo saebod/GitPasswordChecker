@@ -8,8 +8,8 @@ msgList=[]
 # Reads the Keyword list$
 filepath ='GitPasswordChecker/Keywords.txt'
 WordList = Path(filepath).read_text().splitlines()
-with open(filepath,'w') as file:
-    pass
+#with open(filepath,'w') as file:
+#    pass
 # If the wordlist is empty
 if len(WordList) == 0:
     sys.exit(f"The Keyword list is empty. Enter keywords in the file seperated by a comma.")
