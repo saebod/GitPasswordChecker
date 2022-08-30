@@ -34,10 +34,11 @@ try:
                     filepath = os.path.join(root, filename)
 
                     if wordRe.search(Path(filepath).read_text()):
-                        msgList.append(f' Found Keyword in the following file {filepath}')
+                        msgList.append(f'Commit ID: {commit[0]} Commit Name: "{commit[3]}" Found Keyword in the following file {filepath}')
             except Exception:
-                print(filename)
+                pass
     sp.run(['git','checkout','Test2'])
 except Exception as e:
-    print(e)
+    pass
+
 print('\n'.join(msgList))
