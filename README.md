@@ -30,8 +30,8 @@ Enter the keywords that you want to look for in the txt file GitPasswordChecker/
 Run the GitPasswordChecker/main.py from the root of your repo.
 
     .# Run the GitPasswordChecker/main.py from the root of your repo
-    ├── Repofolder1 
-    ├── RepofolderN 
+    ├── folder1 
+    ├── folderN 
     ├── Yourscriptx.py 
     ├── GitPasswordChecker                    
     │   ├── main.py          
