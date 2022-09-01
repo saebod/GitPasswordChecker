@@ -1,7 +1,7 @@
 
 # GitPasswordChecker
 
-This project scans all previous commits to find passwords/keys/tokens that are entered in the keyword.txt file.
+This project scans all previous commits to find passwords/keys/tokens that are entered in the GitPasswordChecker/Keywords.txt file.
 
 ![FoundKeyword](GitPasswordChecker/pic/FoundKeyword.png)
 
