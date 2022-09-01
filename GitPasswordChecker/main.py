@@ -74,4 +74,8 @@ finally:
 #Checkout to orginal branch 
     sp.run(['git','checkout',initialBranch])
     sp.run(['git', 'branch', '-D',newBranch])
-    print('\n'.join(msgList))
+    if len(msgList)!=0:
+        print('\n\n Found keyword in the following commmits:\n')
+        print('\n'.join(msgList))
+    else:
+        print('\n\n Didnt fint any commits with the keyword included\n')
