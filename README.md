@@ -14,10 +14,10 @@ This project is motived by the fact that we are all humans and forget to remove 
 ## How To Use
 
 ### Add the folder *GitPasswordChecker* to your project    .
-    .
-    ├── Repofolder1 
-    ├── RepofolderN 
-    ├── Yourscriptx.py 
+    .YourRepo
+    ├── folder1 
+    ├── folderN 
+    ├── scriptx.py 
     ├── GitPasswordChecker                    # Added to your repo
     │   ├── main.py          
     │   ├── Keywords.txt          # Insert your keywords here
