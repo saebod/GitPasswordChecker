@@ -1,1 +1,1 @@
-string pwd = "HardPassword";
+string pwd = "";
