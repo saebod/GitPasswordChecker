@@ -78,4 +78,4 @@ finally:
         print('\n\n Found keyword in the following commmits:\n')
         print('\n'.join(msgList))
     else:
-        print('\n\n Didnt fint any commits with the keyword included\n')
+        print('\n\n did not find any commits with the keyword included\n')
